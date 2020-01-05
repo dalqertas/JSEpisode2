@@ -19,6 +19,22 @@
 ****************************************************************/
 function pairs(names) {
   // Your code goes here
+  let newArr = [];
+  if (names) {
+      while (names.length != 0) {
+          if (names.length === 1) {
+              let tempArr = [names.getRandom()];
+              newArr.push(tempArr);
+          }
+          else {
+              let tempArr = [];
+              tempArr.push(names.getRandom());
+              tempArr.push(names.getRandom());
+              newArr.push(tempArr);
+          }
+      }
+  }
+  return newArr;
 }
 
 module.exports = pairs;
